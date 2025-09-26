@@ -23,4 +23,28 @@ namespace GYM.BO.ViewModels
 
     public class BodyMetricRow { public Guid MemberId { get; set; } public int MetricTypeId { get; set; } public decimal Value { get; set; } public string Unit { get; set; } public DateTime? MeasuredAt { get; set; } public int SourceId { get; set; } }
     public record BulkMetricsRequest(IList<BodyMetricRow> Metrics);
+
+    public class AttendanceDto
+    {
+        public long AttendanceId { get; set; }
+        public Guid GymId { get; set; }
+        public Guid UserId { get; set; }
+        public int AttendanceTypeId { get; set; }
+        public int SourceId { get; set; }
+        public DateTime CheckinAt { get; set; }
+        public DateTime? CheckoutAt { get; set; }
+    }
+
+    public class CreateAttendanceDto
+    {
+        public Guid GymId { get; set; }
+        public Guid UserId { get; set; }
+        public int AttendanceTypeId { get; set; }
+        public int SourceId { get; set; }
+    }
+
+    public class CheckOutAttendanceDto
+    {
+        public DateTime CheckoutAt { get; set; } = DateTime.UtcNow;
+    }
 }

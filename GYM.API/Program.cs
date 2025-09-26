@@ -1,3 +1,10 @@
+using GYM.API.Middlewares;
+using GYM.EF.Models;
+using GYM.ServiceLayer.AttendanceService;
+using GYM.ServiceLayer.MemberService;
+using GYM.ServiceLayer.UnitOfWork;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -7,8 +14,15 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-var app = builder.Build();
+builder.Services.AddDbContext<GYMContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
+builder.Services.AddScoped<IUnitOfWorkService, UnitOfWorkService>();
+builder.Services.AddScoped<IMemberService, MemberService>();
+builder.Services.AddScoped<IAttendanceService, AttendanceService>();
+
+var app = builder.Build();
+app.UseMiddleware<ExceptionHandlingMiddleware>();
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {

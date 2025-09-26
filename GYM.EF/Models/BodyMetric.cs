@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,6 +10,7 @@ namespace GYM.EF.Models
 
     public class BodyMetric
     {
+        [Key]
         public long BodyMetricId { get; set; }
         public Guid MemberId { get; set; }
         public int MetricTypeId { get; set; }
