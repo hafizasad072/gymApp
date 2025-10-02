@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using GYM.DataLayer.Repository;
+﻿using GYM.DataLayer.Repository;
 using GYM.EF.Models;
 
 namespace GYM.DataLayer.MemberRepository
 {
-    public interface IMemberRepository : IGenericRepository<Member>
+    public interface IMemberRepository : IGenericRepository<Members>
     {
     }
 }

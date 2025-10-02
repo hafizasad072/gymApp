@@ -1,0 +1,23 @@
+﻿
+#nullable disable
+using System;
+using System.Collections.Generic;
+
+namespace GYM.EF.Models;
+
+public partial class DiscussionMessages
+{
+    public Guid MessageId { get; set; }
+
+    public Guid DiscussionId { get; set; }
+
+    public Guid FromUserId { get; set; }
+
+    public string Message { get; set; }
+
+    public DateTime CreatedAt { get; set; }
+
+    public virtual Discussions Discussion { get; set; }
+
+    public virtual Users FromUser { get; set; }
+}

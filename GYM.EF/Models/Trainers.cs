@@ -1,0 +1,31 @@
+﻿
+#nullable disable
+using System;
+using System.Collections.Generic;
+
+namespace GYM.EF.Models;
+
+public partial class Trainers
+{
+    public Guid TrainerId { get; set; }
+
+    public Guid UserId { get; set; }
+
+    public Guid GymId { get; set; }
+
+    public string Bio { get; set; }
+
+    public bool IsAvailable { get; set; }
+
+    public DateTime CreatedAt { get; set; }
+
+    public virtual ICollection<Classes> Classes { get; set; } = new List<Classes>();
+
+    public virtual ICollection<Feedbacks> Feedbacks { get; set; } = new List<Feedbacks>();
+
+    public virtual Gyms Gym { get; set; }
+
+    public virtual ICollection<SessionLogs> SessionLogs { get; set; } = new List<SessionLogs>();
+
+    public virtual Users User { get; set; }
+}

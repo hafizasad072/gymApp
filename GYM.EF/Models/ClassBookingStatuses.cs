@@ -1,0 +1,15 @@
+﻿
+#nullable disable
+using System;
+using System.Collections.Generic;
+
+namespace GYM.EF.Models;
+
+public partial class ClassBookingStatuses
+{
+    public int StatusId { get; set; }
+
+    public string Name { get; set; }
+
+    public virtual ICollection<ClassBookings> ClassBookings { get; set; } = new List<ClassBookings>();
+}

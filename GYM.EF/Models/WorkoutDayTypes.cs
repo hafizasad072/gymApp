@@ -1,0 +1,15 @@
+﻿
+#nullable disable
+using System;
+using System.Collections.Generic;
+
+namespace GYM.EF.Models;
+
+public partial class WorkoutDayTypes
+{
+    public int DayTypeId { get; set; }
+
+    public string Name { get; set; }
+
+    public virtual ICollection<WorkoutPlans> WorkoutPlans { get; set; } = new List<WorkoutPlans>();
+}

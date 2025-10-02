@@ -3,7 +3,7 @@ using GYM.EF.Models;
 
 namespace GYM.DataLayer.UserRepository
 {
-    public class UserRepository : GenericRepository<User>, IUserRepository
+    public class UserRepository : GenericRepository<Users>, IUserRepository
     {
         public UserRepository(GYMContext context) : base(context)
         {

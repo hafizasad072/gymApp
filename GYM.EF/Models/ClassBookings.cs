@@ -1,0 +1,27 @@
+﻿
+#nullable disable
+using System;
+using System.Collections.Generic;
+
+namespace GYM.EF.Models;
+
+public partial class ClassBookings
+{
+    public Guid ClassBookingId { get; set; }
+
+    public Guid ClassScheduleId { get; set; }
+
+    public Guid MemberId { get; set; }
+
+    public int StatusId { get; set; }
+
+    public DateTime BookedAt { get; set; }
+
+    public DateTime? CancelledAt { get; set; }
+
+    public virtual ClassSchedules ClassSchedule { get; set; }
+
+    public virtual Members Member { get; set; }
+
+    public virtual ClassBookingStatuses Status { get; set; }
+}

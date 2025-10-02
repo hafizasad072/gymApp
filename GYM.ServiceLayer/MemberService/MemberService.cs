@@ -1,16 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using GYM.EF.Models;
+﻿using GYM.EF.Models;
 using GYM.ServiceLayer.UnitOfWork;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 
 namespace GYM.ServiceLayer.MemberService
 {
-    
+
     public class MemberService : IMemberService
     {
         private readonly ILogger<MemberService> _logger;
@@ -24,10 +18,10 @@ namespace GYM.ServiceLayer.MemberService
 
             try
             {
-                var user = new User { UserId = Guid.NewGuid(), Email = email, DisplayName = displayName, IsActive = true };
+                var user = new Users { UserId = Guid.NewGuid(), Email = email, DisplayName = displayName, IsActive = true };
                 await _uow.UserRepository.InsertAsync(user);
                 _uow.Commit();
-                var member = new Member { MemberId = Guid.NewGuid(), UserId = user.UserId, GymId = gymId };
+                var member = new Members { MemberId = Guid.NewGuid(), UserId = user.UserId, GymId = gymId };
                 await _uow.MemberRepository.InsertAsync(member);
 
                 _uow.Commit();
@@ -40,14 +34,14 @@ namespace GYM.ServiceLayer.MemberService
             }
         }
 
-        public async Task<Member> GetMember(Guid memberId)
+        public async Task<Members> GetMember(Guid memberId)
         {
-            return await  _uow.MemberRepository.GetByIdAsync(memberId);
+            return await _uow.MemberRepository.GetByIdAsync(memberId);
         }
 
-        public async Task<IEnumerable<Member>> GetAllMembers()
+        public async Task<IEnumerable<Members>> GetAllMembers()
         {
-            return await _uow.MemberRepository.GetAllAsync(a=> true);
+            return await _uow.MemberRepository.GetAllAsync(a => true);
         }
 
         public async Task<bool> DeleteMember(Guid memberId)

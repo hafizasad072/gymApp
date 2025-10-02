@@ -2,7 +2,6 @@
 using GYM.EF.Models;
 using GYM.ServiceLayer.MemberService;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 
 namespace GYM.API.Controllers
 {
@@ -20,7 +19,7 @@ namespace GYM.API.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Member>>> GetMembers()
+        public async Task<ActionResult<IEnumerable<Members>>> GetMembers()
         {
             try
             {
@@ -64,7 +63,7 @@ namespace GYM.API.Controllers
             return Ok(member);
         }
 
-        
+
         [HttpDelete("{id:guid}")]
         public async Task<IActionResult> DeleteMember(Guid id)
         {
