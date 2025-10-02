@@ -1,0 +1,209 @@
+﻿{
+   "CodeGenerationMode": 4,
+   "ContextClassName": "MuscleUpGYMContext",
+   "ContextNamespace": null,
+   "FilterSchemas": false,
+   "IncludeConnectionString": false,
+   "ModelNamespace": null,
+   "OutputContextPath": null,
+   "OutputPath": "Models",
+   "PreserveCasingWithRegex": true,
+   "ProjectRootNamespace": "GYM.EF",
+   "Schemas": null,
+   "SelectedHandlebarsLanguage": 2,
+   "SelectedToBeGenerated": 0,
+   "T4TemplatePath": null,
+   "Tables": [
+      {
+         "Name": "[dbo].[AspNetRoleClaims]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[AspNetRoles]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[AspNetUserClaims]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[AspNetUserLogins]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[AspNetUserRoles]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[AspNetUsers]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[AspNetUserTokens]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Attendance]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[AttendanceSources]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[AttendanceTypes]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[AuditLogs]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[BodyMetrics]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[BodyMetricSources]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[BodyMetricTypes]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[ClassBookings]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[ClassBookingStatuses]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Classes]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[ClassSchedules]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[DiscussionMessages]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Discussions]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Exercises]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[ExternalProviders]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Feedbacks]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Gyms]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Invoices]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[InvoiceStatuses]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Leagues]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Members]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[MembershipPlans]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[MuscleGroups]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Notifications]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[NotificationStatuses]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Payments]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[SessionLogs]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Subscriptions]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[SubscriptionStatuses]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Trainers]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[WorkoutDayExercises]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[WorkoutDays]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[WorkoutDayTypes]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[WorkoutPlans]",
+         "ObjectType": 0
+      }
+   ],
+   "UiHint": null,
+   "UncountableWords": null,
+   "UseAsyncStoredProcedureCalls": true,
+   "UseBoolPropertiesWithoutDefaultSql": false,
+   "UseDatabaseNames": false,
+   "UseDatabaseNamesForRoutines": true,
+   "UseDateOnlyTimeOnly": true,
+   "UseDbContextSplitting": false,
+   "UseDecimalDataAnnotationForSprocResult": true,
+   "UseFluentApiOnly": true,
+   "UseHandleBars": false,
+   "UseHierarchyId": false,
+   "UseInflector": false,
+   "UseInternalAccessModifiersForSprocsAndFunctions": false,
+   "UseLegacyPluralizer": false,
+   "UseManyToManyEntity": false,
+   "UseNoDefaultConstructor": false,
+   "UseNoNavigations": false,
+   "UseNoObjectFilter": false,
+   "UseNodaTime": false,
+   "UseNullableReferences": false,
+   "UsePrefixNavigationNaming": false,
+   "UseSchemaFolders": false,
+   "UseSchemaNamespaces": false,
+   "UseSpatial": false,
+   "UseT4": false,
+   "UseT4Split": false
+}

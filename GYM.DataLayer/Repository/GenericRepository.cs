@@ -6,10 +6,10 @@ namespace GYM.DataLayer.Repository
 {
     public class GenericRepository<T> : IGenericRepository<T> where T : class
     {
-        protected readonly GYMContext _context;
+        protected readonly MuscleUpGYMContext _context;
         protected readonly DbSet<T> _dbSet;
 
-        public GenericRepository(GYMContext context)
+        public GenericRepository(MuscleUpGYMContext context)
         {
             _context = context;
             _dbSet = _context.Set<T>();
@@ -24,10 +24,10 @@ namespace GYM.DataLayer.Repository
         {
             IQueryable<T> query = _dbSet;
 
-            if(disableTracking)
+            if (disableTracking)
                 query = query.AsNoTracking();
 
-            if(include != null)
+            if (include != null)
                 query = include(query);
 
             return await query.FirstOrDefaultAsync(predicate);
@@ -35,7 +35,7 @@ namespace GYM.DataLayer.Repository
 
         public IQueryable<T> GetAll(Expression<Func<T, bool>> predicate = null)
         {
-            if(predicate == null)
+            if (predicate == null)
             {
                 return _dbSet; // Return all
             }
@@ -51,16 +51,16 @@ namespace GYM.DataLayer.Repository
         {
             IQueryable<T> query = _dbSet;
 
-            if(disableTracking)
+            if (disableTracking)
                 query = query.AsNoTracking();
 
-            if(filter != null)
+            if (filter != null)
                 query = query.Where(filter);
 
-            if(include != null)
+            if (include != null)
                 query = include(query);
 
-            if(orderBy != null)
+            if (orderBy != null)
                 query = orderBy(query);
 
             return await query.ToListAsync();
@@ -68,7 +68,7 @@ namespace GYM.DataLayer.Repository
 
         public async Task<IEnumerable<T>> GetAllAsync(Expression<Func<T, bool>> predicate = null)
         {
-            if(predicate == null)
+            if (predicate == null)
             {
                 return await _dbSet.ToListAsync();
             }
@@ -113,7 +113,7 @@ namespace GYM.DataLayer.Repository
 
         public void DeleteBulk(IEnumerable<T> entities)
         {
-            foreach(var entity in entities)
+            foreach (var entity in entities)
             {
                 _context.Entry(entity).State = EntityState.Deleted;
             }

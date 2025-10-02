@@ -20,7 +20,7 @@ namespace GYM.API.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Member>>> GetMembers()
+        public async Task<ActionResult<IEnumerable<Members>>> GetMembers()
         {
             try
             {
