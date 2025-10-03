@@ -1,11 +1,12 @@
 ﻿using GYM.DataLayer.Repository;
+using GYM.EF;
 using GYM.EF.Models;
 
 namespace GYM.DataLayer.UserRepository
 {
-    public class UserRepository : GenericRepository<User>, IUserRepository
+    public class UserRepository : GenericRepository<ApplicationUser>, IUserRepository
     {
-        public UserRepository(GYMContext context) : base(context)
+        public UserRepository(GymDbContext context) : base(context)
         {
         }
     }
