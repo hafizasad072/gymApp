@@ -1,4 +1,5 @@
 ﻿using GYM.DataLayer.AttendanceRepository;
+using GYM.DataLayer.MemberRepository;
 using GYM.DataLayer.UserRepository;
 
 namespace GYM.ServiceLayer.UnitOfWork
@@ -10,6 +11,10 @@ namespace GYM.ServiceLayer.UnitOfWork
             get;
         }
         IAttendanceRepository AttendanceRepository
+        {
+            get;
+        }
+        IMemberRepository MemberRepository
         {
             get;
         }

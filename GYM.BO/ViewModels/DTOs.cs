@@ -51,4 +51,32 @@ namespace GYM.BO.ViewModels
         public DateTime CheckinAt { get; set; }
         public int SourceId { get; set; }
     }
+
+    public class MemberDto
+    {
+        public Guid MemberId { get; set; }
+        public string UserId { get; set; } 
+        public Guid GymId { get; set; }
+        public int? LeagueId { get; set; }
+        public DateTime JoinDate { get; set; }
+        public string Gender { get; set; }
+        public DateTime DateOfBirth { get; set; }
+    }
+
+    public class CreateMemberDto
+    {
+        public string UserId { get; set; }
+        public Guid GymId { get; set; }
+        public int? LeagueId { get; set; }
+        public string Gender { get; set; }
+        public DateTime DateOfBirth { get; set; }
+    }
+
+    public class UpdateMemberDto
+    {
+        public Guid MemberId { get; set; }
+        public int? LeagueId { get; set; }
+        public string Gender { get; set; }
+        public DateTime DateOfBirth { get; set; }
+    }
 }

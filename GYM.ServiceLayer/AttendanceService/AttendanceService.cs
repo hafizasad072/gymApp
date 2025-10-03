@@ -47,7 +47,7 @@ namespace GYM.ServiceLayer
         /// <returns></returns>
         public async Task<bool> Update(Attendance model)
         {
-            var entity = await _uow.AttendanceRepository.GetAsync(x => x.AttendanceId == model.AttendanceId);
+            var entity = await _uow.AttendanceRepository.GetAsync(x => x.AttendanceId == model.AttendanceId, null, false);
 
             if (entity == null)
                 return false;
