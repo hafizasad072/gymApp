@@ -79,4 +79,28 @@ namespace GYM.BO.ViewModels
         public string Gender { get; set; }
         public DateTime DateOfBirth { get; set; }
     }
+
+    public class TrainerDto
+    {
+        public Guid TrainerId { get; set; }
+        public string UserId { get; set; }    
+        public Guid GymId { get; set; }
+        public string Bio { get; set; }
+        public bool IsAvailable { get; set; }
+    }
+
+    public class CreateTrainerDto
+    {
+        public string UserId { get; set; }
+        public Guid GymId { get; set; }
+        public string Bio { get; set; }
+        public bool IsAvailable { get; set; }
+    }
+
+    public class UpdateTrainerDto
+    {
+        public Guid TrainerId { get; set; }
+        public string Bio { get; set; }
+        public bool IsAvailable { get; set; }
+    }
 }

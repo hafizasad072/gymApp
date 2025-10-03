@@ -41,7 +41,8 @@ namespace GYM.API.Controllers
                 LeagueId = dto.LeagueId,
                 JoinDate = DateTime.UtcNow,
                 DateOfBirth = dto.DateOfBirth,
-                Gender = dto.Gender
+                Gender = dto.Gender,
+                CreatedAt = DateTime.Now
             };
 
             var id = await _memberService.Create(entity);
