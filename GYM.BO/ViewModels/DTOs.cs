@@ -26,25 +26,29 @@ namespace GYM.BO.ViewModels
 
     public class AttendanceDto
     {
-        public long AttendanceId { get; set; }
+        public Guid AttendanceId { get; set; }
+        public string UserId { get; set; }        // AspNetUsers.Id (string)
         public Guid GymId { get; set; }
-        public Guid UserId { get; set; }
-        public int AttendanceTypeId { get; set; }
-        public int SourceId { get; set; }
         public DateTime CheckinAt { get; set; }
         public DateTime? CheckoutAt { get; set; }
+        public int SourceId { get; set; }
+        public int AttendanceTypeId { get; set; }
     }
 
     public class CreateAttendanceDto
     {
+        public string UserId { get; set; }
         public Guid GymId { get; set; }
-        public Guid UserId { get; set; }
-        public int AttendanceTypeId { get; set; }
+        public DateTime CheckinAt { get; set; }
         public int SourceId { get; set; }
+        public int AttendanceTypeId { get; set; }
     }
 
-    public class CheckOutAttendanceDto
+    public class UpdateAttendanceDto
     {
-        public DateTime CheckoutAt { get; set; } = DateTime.UtcNow;
+        public Guid AttendanceId { get; set; }
+        public DateTime? CheckoutAt { get; set; }
+        public DateTime CheckinAt { get; set; }
+        public int SourceId { get; set; }
     }
 }

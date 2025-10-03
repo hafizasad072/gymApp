@@ -7,6 +7,31 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Models\Attendance.cs" />
+    <Compile Remove="Models\AuditLog.cs" />
+    <Compile Remove="Models\BodyMetric.cs" />
+    <Compile Remove="Models\Class.cs" />
+    <Compile Remove="Models\ClassBooking.cs" />
+    <Compile Remove="Models\ClassSchedule.cs" />
+    <Compile Remove="Models\Discussion.cs" />
+    <Compile Remove="Models\Exercise.cs" />
+    <Compile Remove="Models\ExternalProvider.cs" />
+    <Compile Remove="Models\Feedback.cs" />
+    <Compile Remove="Models\Gym.cs" />
+    <Compile Remove="Models\Invoice.cs" />
+    <Compile Remove="Models\League.cs" />
+    <Compile Remove="Models\Member.cs" />
+    <Compile Remove="Models\MembershipPlan.cs" />
+    <Compile Remove="Models\MuscleGroup.cs" />
+    <Compile Remove="Models\Notification.cs" />
+    <Compile Remove="Models\Payment.cs" />
+    <Compile Remove="Models\SessionLog.cs" />
+    <Compile Remove="Models\Subscription.cs" />
+    <Compile Remove="Models\Trainer.cs" />
+    <Compile Remove="Models\WorkoutPlan.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Migrations\" />
   </ItemGroup>
 

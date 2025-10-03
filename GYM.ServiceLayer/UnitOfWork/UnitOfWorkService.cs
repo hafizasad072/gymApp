@@ -1,4 +1,5 @@
-﻿using GYM.DataLayer.UserRepository;
+﻿using GYM.DataLayer.AttendanceRepository;
+using GYM.DataLayer.UserRepository;
 using GYM.EF;
 
 namespace GYM.ServiceLayer.UnitOfWork
@@ -7,8 +8,11 @@ namespace GYM.ServiceLayer.UnitOfWork
     {
 
         private IUserRepository _userRepository;
+        private IAttendanceRepository _attendanceRepository;
 
         public IUserRepository UserRepository => _userRepository == null ? new UserRepository(context) : _userRepository;
+
+        public IAttendanceRepository AttendanceRepository => _attendanceRepository == null ? new AttendanceRepository(context) : _attendanceRepository;
         public int Commit()
         {
             return context.SaveChanges();
