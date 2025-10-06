@@ -4,6 +4,7 @@ using GYM.DataLayer.ClassRepository;
 using GYM.DataLayer.ClassScheduleRepository;
 using GYM.DataLayer.GymRepository;
 using GYM.DataLayer.MemberRepository;
+using GYM.DataLayer.MembershipPlanRepository;
 using GYM.DataLayer.TrainerRepository;
 using GYM.DataLayer.UserRepository;
 
@@ -40,6 +41,10 @@ namespace GYM.ServiceLayer.UnitOfWork
             get;
         }
         IClassBookingRepository ClassBookingRepository
+        {
+            get;
+        }
+        IMembershipPlanRepository MembershipPlanRepository
         {
             get;
         }

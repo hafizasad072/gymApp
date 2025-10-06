@@ -4,6 +4,7 @@ using GYM.DataLayer.ClassRepository;
 using GYM.DataLayer.ClassScheduleRepository;
 using GYM.DataLayer.GymRepository;
 using GYM.DataLayer.MemberRepository;
+using GYM.DataLayer.MembershipPlanRepository;
 using GYM.DataLayer.TrainerRepository;
 using GYM.DataLayer.UserRepository;
 using GYM.EF;
@@ -21,6 +22,7 @@ namespace GYM.ServiceLayer.UnitOfWork
         private IClassRepository _classRepository;
         private IClassScheduleRepository _classScheduleRepository;
         private IClassBookingRepository _classBookingRepository;
+        private IMembershipPlanRepository _membershipPlanRepository;
 
         public IUserRepository UserRepository => _userRepository == null ? new UserRepository(context) : _userRepository;
         public IMemberRepository MemberRepository => _memberRepository == null ? new MemberRepository(context) : _memberRepository;
@@ -30,6 +32,7 @@ namespace GYM.ServiceLayer.UnitOfWork
         public IClassRepository ClassRepository => _classRepository == null ? new ClassRepository(context) : _classRepository;
         public IClassScheduleRepository ClassScheduleRepository => _classScheduleRepository == null ? new ClassScheduleRepository(context) : _classScheduleRepository;
         public IClassBookingRepository ClassBookingRepository => _classBookingRepository == null ? new ClassBookingRepository(context) : _classBookingRepository;
+        public IMembershipPlanRepository MembershipPlanRepository => _membershipPlanRepository == null ? new MembershipPlanRepository(context) : _membershipPlanRepository;
 
         public int Commit()
         {
