@@ -126,4 +126,65 @@ namespace GYM.BO.ViewModels
         public string Name { get; set; }
         public string Timezone { get; set; }
     }
+
+    public class ClassDto
+    {
+        public Guid ClassId { get; set; }
+        public string Title { get; set; }
+        public string Description { get; set; }
+        public int Capacity { get; set; }
+        public Guid GymId { get; set; }
+        public Guid TrainerId { get; set; }
+        public DateTime CreatedAt { get; set; }
+    }
+
+    public class CreateClassDto
+    {
+        public string Title { get; set; }
+        public string Description { get; set; }
+        public int Capacity { get; set; }
+        public Guid GymId { get; set; }
+        public Guid TrainerId { get; set; }
+    }
+
+    public class UpdateClassDto
+    {
+        public Guid ClassId { get; set; }
+        public string Title { get; set; }
+        public string Description { get; set; }
+        public int Capacity { get; set; }
+    }
+
+    public class ClassScheduleDto
+    {
+        public Guid ClassScheduleId { get; set; }
+        public Guid ClassId { get; set; }
+        public DateTime StartTime { get; set; }
+        public DateTime EndTime { get; set; }
+        public string Location { get; set; }
+    }
+
+    public class CreateClassScheduleDto
+    {
+        public Guid ClassId { get; set; }
+        public DateTime StartTime { get; set; }
+        public DateTime EndTime { get; set; }
+        public string Location { get; set; }
+    }
+
+    public class ClassBookingDto
+    {
+        public Guid ClassBookingId { get; set; }
+        public Guid ClassScheduleId { get; set; }
+        public Guid MemberId { get; set; }
+        public int StatusId { get; set; }
+        public DateTime BookedAt { get; set; }
+    }
+
+    public class CreateClassBookingDto
+    {
+        public Guid ClassScheduleId { get; set; }
+        public Guid MemberId { get; set; }
+    }
+
 }

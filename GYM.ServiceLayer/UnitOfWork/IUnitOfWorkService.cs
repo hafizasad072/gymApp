@@ -1,4 +1,7 @@
 ﻿using GYM.DataLayer.AttendanceRepository;
+using GYM.DataLayer.ClassBookingRepository;
+using GYM.DataLayer.ClassRepository;
+using GYM.DataLayer.ClassScheduleRepository;
 using GYM.DataLayer.GymRepository;
 using GYM.DataLayer.MemberRepository;
 using GYM.DataLayer.TrainerRepository;
@@ -20,13 +23,23 @@ namespace GYM.ServiceLayer.UnitOfWork
         {
             get;
         }
-
         ITrainerRepository TrainerRepository
         {
             get;
         }
-
         IGymRepository GymRepository
+        {
+            get;
+        }
+        IClassRepository ClassRepository
+        {
+            get;
+        }
+        IClassScheduleRepository ClassScheduleRepository
+        {
+            get;
+        }
+        IClassBookingRepository ClassBookingRepository
         {
             get;
         }

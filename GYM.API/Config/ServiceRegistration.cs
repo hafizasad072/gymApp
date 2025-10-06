@@ -1,4 +1,7 @@
 ﻿using GYM.ServiceLayer;
+using GYM.ServiceLayer.ClassBookingService;
+using GYM.ServiceLayer.ClassScheduleService;
+using GYM.ServiceLayer.ClassService;
 using GYM.ServiceLayer.GymService;
 using GYM.ServiceLayer.MemberService;
 using GYM.ServiceLayer.TrainerService;
@@ -16,6 +19,9 @@ namespace GYM.API.Config
             services.AddScoped<IMemberService, MemberService>();
             services.AddScoped<ITrainerService, TrainerService>();
             services.AddScoped<IGymService, GymService>();
+            services.AddScoped<IClassService, ClassService>();
+            services.AddScoped<IClassScheduleService, ClassScheduleService>();
+            services.AddScoped<IClassBookingService, ClassBookingService>();
         }
     }
 
