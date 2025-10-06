@@ -103,4 +103,27 @@ namespace GYM.BO.ViewModels
         public string Bio { get; set; }
         public bool IsAvailable { get; set; }
     }
+
+    public class GymDto
+    {
+        public Guid GymId { get; set; }
+        public string Name { get; set; }
+        public string OwnerUserId { get; set; }
+        public string Timezone { get; set; }
+        public DateTime CreatedAt { get; set; }
+    }
+
+    public class CreateGymDto
+    {
+        public string Name { get; set; }
+        public string OwnerUserId { get; set; }
+        public string Timezone { get; set; }
+    }
+
+    public class UpdateGymDto
+    {
+        public Guid GymId { get; set; }
+        public string Name { get; set; }
+        public string Timezone { get; set; }
+    }
 }

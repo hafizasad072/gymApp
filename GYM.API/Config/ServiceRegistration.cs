@@ -1,4 +1,5 @@
 ﻿using GYM.ServiceLayer;
+using GYM.ServiceLayer.GymService;
 using GYM.ServiceLayer.MemberService;
 using GYM.ServiceLayer.TrainerService;
 using GYM.ServiceLayer.UnitOfWork;
@@ -14,6 +15,7 @@ namespace GYM.API.Config
             services.AddScoped<IAttendanceService, AttendanceService>();
             services.AddScoped<IMemberService, MemberService>();
             services.AddScoped<ITrainerService, TrainerService>();
+            services.AddScoped<IGymService, GymService>();
         }
     }
 
