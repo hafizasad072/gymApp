@@ -272,6 +272,7 @@ namespace GYM.EF.Models
         public decimal Amount { get; set; }
         public string Currency { get; set; }
         public DateTime IssuedAt { get; set; }
+        public DateTime DueDate { get; set; }
         public DateTime? PaidAt { get; set; }
         public int StatusId { get; set; }
 

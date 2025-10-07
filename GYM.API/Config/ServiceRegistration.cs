@@ -3,8 +3,11 @@ using GYM.ServiceLayer.ClassBookingService;
 using GYM.ServiceLayer.ClassScheduleService;
 using GYM.ServiceLayer.ClassService;
 using GYM.ServiceLayer.GymService;
+using GYM.ServiceLayer.InvoiceService;
 using GYM.ServiceLayer.MemberService;
 using GYM.ServiceLayer.MembershipPlanService;
+using GYM.ServiceLayer.PaymentService;
+using GYM.ServiceLayer.SubscriptionService;
 using GYM.ServiceLayer.TrainerService;
 using GYM.ServiceLayer.UnitOfWork;
 
@@ -24,6 +27,9 @@ namespace GYM.API.Config
             services.AddScoped<IClassScheduleService, ClassScheduleService>();
             services.AddScoped<IClassBookingService, ClassBookingService>();
             services.AddScoped<IMembershipPlanService, MembershipPlanService>();
+            services.AddScoped<ISubscriptionService, SubscriptionService>();
+            services.AddScoped<IPaymentService, PaymentService>();
+            services.AddScoped<IInvoiceService, InvoiceService>();
         }
     }
 

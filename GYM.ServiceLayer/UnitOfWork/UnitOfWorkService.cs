@@ -3,8 +3,11 @@ using GYM.DataLayer.ClassBookingRepository;
 using GYM.DataLayer.ClassRepository;
 using GYM.DataLayer.ClassScheduleRepository;
 using GYM.DataLayer.GymRepository;
+using GYM.DataLayer.InvoiceRepository;
 using GYM.DataLayer.MemberRepository;
 using GYM.DataLayer.MembershipPlanRepository;
+using GYM.DataLayer.PaymentRepository;
+using GYM.DataLayer.SubscriptionRepository;
 using GYM.DataLayer.TrainerRepository;
 using GYM.DataLayer.UserRepository;
 using GYM.EF;
@@ -23,6 +26,9 @@ namespace GYM.ServiceLayer.UnitOfWork
         private IClassScheduleRepository _classScheduleRepository;
         private IClassBookingRepository _classBookingRepository;
         private IMembershipPlanRepository _membershipPlanRepository;
+        private ISubscriptionRepository _subscriptionRepository;
+        private IInvoiceRepository _invoiceRepository;
+        private IPaymentRepository _paymentRepository;
 
         public IUserRepository UserRepository => _userRepository == null ? new UserRepository(context) : _userRepository;
         public IMemberRepository MemberRepository => _memberRepository == null ? new MemberRepository(context) : _memberRepository;
@@ -33,6 +39,9 @@ namespace GYM.ServiceLayer.UnitOfWork
         public IClassScheduleRepository ClassScheduleRepository => _classScheduleRepository == null ? new ClassScheduleRepository(context) : _classScheduleRepository;
         public IClassBookingRepository ClassBookingRepository => _classBookingRepository == null ? new ClassBookingRepository(context) : _classBookingRepository;
         public IMembershipPlanRepository MembershipPlanRepository => _membershipPlanRepository == null ? new MembershipPlanRepository(context) : _membershipPlanRepository;
+        public ISubscriptionRepository SubscriptionRepository => _subscriptionRepository == null ? new SubscriptionRepository(context) : _subscriptionRepository;
+        public IPaymentRepository PaymentRepository => _paymentRepository == null ? new PaymentRepository(context) : _paymentRepository;
+        public IInvoiceRepository InvoiceRepository => _invoiceRepository == null ? new InvoiceRepository(context) : _invoiceRepository;
 
         public int Commit()
         {

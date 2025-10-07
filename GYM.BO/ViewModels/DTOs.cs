@@ -220,5 +220,65 @@ namespace GYM.BO.ViewModels
         public int DurationDays { get; set; }
         public bool IsActive { get; set; }
     }
+    public class SubscriptionDto
+    {
+        public Guid SubscriptionId { get; set; }
+        public Guid MemberId { get; set; }
+        public Guid PlanId { get; set; }
+        public DateTime StartDate { get; set; }
+        public DateTime EndDate { get; set; }
+        public int StatusId { get; set; }
+    }
+
+    public class CreateSubscriptionDto
+    {
+        public Guid MemberId { get; set; }
+        public Guid PlanId { get; set; }
+        public DateTime StartDate { get; set; }
+    }
+
+    public class UpdateSubscriptionDto
+    {
+        public Guid SubscriptionId { get; set; }
+        public int StatusId { get; set; }
+        public DateTime? EndDate { get; set; }
+    }
+    public class InvoiceDto
+    {
+        public Guid InvoiceId { get; set; }
+        public Guid SubscriptionId { get; set; }
+        public Guid MemberId { get; set; }
+        public Guid GymId { get; set; }
+        public decimal Amount { get; set; }
+        public int StatusId { get; set; }
+        public DateTime IssuedAt { get; set; }
+        public DateTime DueDate { get; set; }
+    }
+
+    public class CreateInvoiceDto
+    {
+        public Guid SubscriptionId { get; set; }
+        public Guid MemberId { get; set; }
+        public Guid GymId { get; set; }
+        public decimal Amount { get; set; }
+        public DateTime DueDate { get; set; }
+    }
+    public class PaymentDto
+    {
+        public Guid PaymentId { get; set; }
+        public Guid InvoiceId { get; set; }
+        public decimal Amount { get; set; }
+        public DateTime PaidAt { get; set; }
+        public string PaymentMethod { get; set; }
+        public string TransactionRef { get; set; }
+    }
+
+    public class CreatePaymentDto
+    {
+        public Guid InvoiceId { get; set; }
+        public decimal Amount { get; set; }
+        public string PaymentMethod { get; set; }
+        public string TransactionRef { get; set; }
+    }
 
 }

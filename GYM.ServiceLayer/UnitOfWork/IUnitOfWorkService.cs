@@ -3,8 +3,11 @@ using GYM.DataLayer.ClassBookingRepository;
 using GYM.DataLayer.ClassRepository;
 using GYM.DataLayer.ClassScheduleRepository;
 using GYM.DataLayer.GymRepository;
+using GYM.DataLayer.InvoiceRepository;
 using GYM.DataLayer.MemberRepository;
 using GYM.DataLayer.MembershipPlanRepository;
+using GYM.DataLayer.PaymentRepository;
+using GYM.DataLayer.SubscriptionRepository;
 using GYM.DataLayer.TrainerRepository;
 using GYM.DataLayer.UserRepository;
 
@@ -45,6 +48,18 @@ namespace GYM.ServiceLayer.UnitOfWork
             get;
         }
         IMembershipPlanRepository MembershipPlanRepository
+        {
+            get;
+        }
+        ISubscriptionRepository SubscriptionRepository
+        {
+            get;
+        }
+        IPaymentRepository PaymentRepository
+        {
+            get;
+        }
+        IInvoiceRepository InvoiceRepository
         {
             get;
         }
