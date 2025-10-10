@@ -1,4 +1,5 @@
 ﻿using GYM.ServiceLayer;
+using GYM.ServiceLayer.BodyMetricService;
 using GYM.ServiceLayer.ClassBookingService;
 using GYM.ServiceLayer.ClassScheduleService;
 using GYM.ServiceLayer.ClassService;
@@ -32,6 +33,7 @@ namespace GYM.API.Config
             services.AddScoped<IPaymentService, PaymentService>();
             services.AddScoped<IInvoiceService, InvoiceService>();
             services.AddScoped<IDiscussionService, DiscussionService>();
+            services.AddScoped<IBodyMetricService, BodyMetricService>();
         }
     }
 

@@ -1,4 +1,5 @@
 ﻿using GYM.DataLayer.AttendanceRepository;
+using GYM.DataLayer.BodyMetricRepository;
 using GYM.DataLayer.ClassBookingRepository;
 using GYM.DataLayer.ClassRepository;
 using GYM.DataLayer.ClassScheduleRepository;
@@ -65,12 +66,15 @@ namespace GYM.ServiceLayer.UnitOfWork
         {
             get;
         }
-
         IDiscussionRepository DiscussionRepository
         {
             get;
         }
         IDiscussionMessageRepository DiscussionMessageRepository
+        {
+            get;
+        }
+        IBodyMetricRepository BodyMetricRepository
         {
             get;
         }

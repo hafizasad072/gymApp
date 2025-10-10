@@ -325,4 +325,33 @@ namespace GYM.BO.ViewModels
         public string Message { get; set; }
     }
 
+    public class BodyMetricDto
+    {
+        public Guid BodyMetricId { get; set; }
+        public Guid MemberId { get; set; }
+        public int MetricTypeId { get; set; }
+        public decimal Value { get; set; }
+        public string Unit { get; set; }
+        public DateTime MeasuredAt { get; set; }
+        public int SourceId { get; set; }
+    }
+
+    public class CreateBodyMetricDto
+    {
+        public Guid MemberId { get; set; }
+        public int MetricTypeId { get; set; }
+        public decimal Value { get; set; }
+        public string Unit { get; set; }
+        public DateTime MeasuredAt { get; set; }
+        public int SourceId { get; set; }
+    }
+
+    public class UpdateBodyMetricDto
+    {
+        public Guid BodyMetricId { get; set; }
+        public decimal Value { get; set; }
+        public string Unit { get; set; }
+        public DateTime MeasuredAt { get; set; }
+        public int SourceId { get; set; }
+    }
 }
