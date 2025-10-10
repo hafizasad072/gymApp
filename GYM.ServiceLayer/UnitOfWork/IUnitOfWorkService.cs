@@ -2,6 +2,8 @@
 using GYM.DataLayer.ClassBookingRepository;
 using GYM.DataLayer.ClassRepository;
 using GYM.DataLayer.ClassScheduleRepository;
+using GYM.DataLayer.DiscussionMessageRepository;
+using GYM.DataLayer.DiscussionRepository;
 using GYM.DataLayer.GymRepository;
 using GYM.DataLayer.InvoiceRepository;
 using GYM.DataLayer.MemberRepository;
@@ -60,6 +62,15 @@ namespace GYM.ServiceLayer.UnitOfWork
             get;
         }
         IInvoiceRepository InvoiceRepository
+        {
+            get;
+        }
+
+        IDiscussionRepository DiscussionRepository
+        {
+            get;
+        }
+        IDiscussionMessageRepository DiscussionMessageRepository
         {
             get;
         }

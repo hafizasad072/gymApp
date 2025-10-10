@@ -281,4 +281,48 @@ namespace GYM.BO.ViewModels
         public string TransactionRef { get; set; }
     }
 
+    public class DiscussionDto
+    {
+        public Guid DiscussionId { get; set; }
+        public Guid GymId { get; set; }
+        public string Title { get; set; }
+        public string Body { get; set; }
+        public string CreatedByUserId { get; set; }
+        public bool IsFranchiseWide { get; set; }
+        public DateTime CreatedAt { get; set; }
+    }
+
+    public class CreateDiscussionDto
+    {
+        public Guid GymId { get; set; }
+        public string Title { get; set; }
+        public string Body { get; set; }
+        public string CreatedByUserId { get; set; }
+        public bool IsFranchiseWide { get; set; }
+    }
+
+    public class UpdateDiscussionDto
+    {
+        public Guid DiscussionId { get; set; }
+        public string Title { get; set; }
+        public string Body { get; set; }
+        public bool IsFranchiseWide { get; set; }
+    }
+
+    public class DiscussionMessageDto
+    {
+        public Guid MessageId { get; set; }
+        public Guid DiscussionId { get; set; }
+        public string FromUserId { get; set; } 
+        public string Message { get; set; }
+        public DateTime CreatedAt { get; set; }
+    }
+
+    public class CreateDiscussionMessageDto
+    {
+        public Guid DiscussionId { get; set; }
+        public string UserId { get; set; }
+        public string Message { get; set; }
+    }
+
 }

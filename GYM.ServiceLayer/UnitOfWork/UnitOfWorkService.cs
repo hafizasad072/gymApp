@@ -2,6 +2,8 @@
 using GYM.DataLayer.ClassBookingRepository;
 using GYM.DataLayer.ClassRepository;
 using GYM.DataLayer.ClassScheduleRepository;
+using GYM.DataLayer.DiscussionMessageRepository;
+using GYM.DataLayer.DiscussionRepository;
 using GYM.DataLayer.GymRepository;
 using GYM.DataLayer.InvoiceRepository;
 using GYM.DataLayer.MemberRepository;
@@ -29,6 +31,8 @@ namespace GYM.ServiceLayer.UnitOfWork
         private ISubscriptionRepository _subscriptionRepository;
         private IInvoiceRepository _invoiceRepository;
         private IPaymentRepository _paymentRepository;
+        private IDiscussionRepository _discussionRepository;
+        private IDiscussionMessageRepository _discussionMessageRepository;
 
         public IUserRepository UserRepository => _userRepository == null ? new UserRepository(context) : _userRepository;
         public IMemberRepository MemberRepository => _memberRepository == null ? new MemberRepository(context) : _memberRepository;
@@ -42,6 +46,8 @@ namespace GYM.ServiceLayer.UnitOfWork
         public ISubscriptionRepository SubscriptionRepository => _subscriptionRepository == null ? new SubscriptionRepository(context) : _subscriptionRepository;
         public IPaymentRepository PaymentRepository => _paymentRepository == null ? new PaymentRepository(context) : _paymentRepository;
         public IInvoiceRepository InvoiceRepository => _invoiceRepository == null ? new InvoiceRepository(context) : _invoiceRepository;
+        public IDiscussionRepository DiscussionRepository => _discussionRepository == null ? new DiscussionRepository(context) : _discussionRepository;
+        public IDiscussionMessageRepository DiscussionMessageRepository => _discussionMessageRepository == null ? new DiscussionMessageRepository(context) : _discussionMessageRepository;
 
         public int Commit()
         {
