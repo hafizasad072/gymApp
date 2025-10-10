@@ -354,4 +354,35 @@ namespace GYM.BO.ViewModels
         public DateTime MeasuredAt { get; set; }
         public int SourceId { get; set; }
     }
+
+    public class ExerciseDto
+    {
+        public Guid ExerciseId { get; set; }
+        public Guid GymId { get; set; }
+        public string Name { get; set; }
+        public string Description { get; set; }
+        public int MuscleGroupId { get; set; }
+        public string Equipment { get; set; }
+        public bool IsActive { get; set; }
+        public DateTime CreatedAt { get; set; }
+    }
+
+    public class CreateExerciseDto
+    {
+        public Guid GymId { get; set; }
+        public string Name { get; set; }
+        public string Description { get; set; }
+        public int MuscleGroupId { get; set; }
+        public string Equipment { get; set; }
+    }
+
+    public class UpdateExerciseDto
+    {
+        public Guid ExerciseId { get; set; }
+        public string Name { get; set; }
+        public string Description { get; set; }
+        public int MuscleGroupId { get; set; }
+        public string Equipment { get; set; }
+        public bool IsActive { get; set; }
+    }
 }

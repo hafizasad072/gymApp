@@ -5,6 +5,7 @@ using GYM.DataLayer.ClassRepository;
 using GYM.DataLayer.ClassScheduleRepository;
 using GYM.DataLayer.DiscussionMessageRepository;
 using GYM.DataLayer.DiscussionRepository;
+using GYM.DataLayer.ExerciseRepository;
 using GYM.DataLayer.GymRepository;
 using GYM.DataLayer.InvoiceRepository;
 using GYM.DataLayer.MemberRepository;
@@ -35,6 +36,7 @@ namespace GYM.ServiceLayer.UnitOfWork
         private IDiscussionRepository _discussionRepository;
         private IDiscussionMessageRepository _discussionMessageRepository;
         private IBodyMetricRepository _bodyMetricRepository;
+        private IExerciseRepository _exerciseRepository;
 
         public IUserRepository UserRepository => _userRepository == null ? new UserRepository(context) : _userRepository;
         public IMemberRepository MemberRepository => _memberRepository == null ? new MemberRepository(context) : _memberRepository;
@@ -51,6 +53,7 @@ namespace GYM.ServiceLayer.UnitOfWork
         public IDiscussionRepository DiscussionRepository => _discussionRepository == null ? new DiscussionRepository(context) : _discussionRepository;
         public IDiscussionMessageRepository DiscussionMessageRepository => _discussionMessageRepository == null ? new DiscussionMessageRepository(context) : _discussionMessageRepository;
         public IBodyMetricRepository BodyMetricRepository => _bodyMetricRepository == null ? new BodyMetricRepository(context) : _bodyMetricRepository;
+        public IExerciseRepository ExerciseRepository => _exerciseRepository == null ? new ExerciseRepository(context) : _exerciseRepository;
         public int Commit()
         {
             return context.SaveChanges();

@@ -5,6 +5,7 @@ using GYM.DataLayer.ClassRepository;
 using GYM.DataLayer.ClassScheduleRepository;
 using GYM.DataLayer.DiscussionMessageRepository;
 using GYM.DataLayer.DiscussionRepository;
+using GYM.DataLayer.ExerciseRepository;
 using GYM.DataLayer.GymRepository;
 using GYM.DataLayer.InvoiceRepository;
 using GYM.DataLayer.MemberRepository;
@@ -75,6 +76,10 @@ namespace GYM.ServiceLayer.UnitOfWork
             get;
         }
         IBodyMetricRepository BodyMetricRepository
+        {
+            get;
+        }
+        IExerciseRepository ExerciseRepository
         {
             get;
         }
